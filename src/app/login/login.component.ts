@@ -25,17 +25,7 @@ export class LoginComponent {
   onSubmit(): void {
     const { username, password } = this.form;
 
-    if (username !== "süeda" || password !== "1234") {
-      this.errorMessage = "kullanıcı adı veya şifre hatalı";
-      this.isLoginFailed = true;
-    } else {
-
-      this.isLoginFailed = false;
-      this.isLoggedIn = true;
-      this.router.navigateByUrl('/layout');
-    }
-
-
+    this.loginService.login(username, password);
     console.log(username, password)
   }
 
