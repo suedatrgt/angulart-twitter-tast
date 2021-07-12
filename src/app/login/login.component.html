@@ -1,36 +1,46 @@
-<div class="col-md-4">
-
-  <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
-    <div>
-      <label for="username">Ad</label>
-      <input type="text" name="username" [(ngModel)]="form.username" #username="ngModel" />
-      <div role="alert" *ngIf="username.errors && f.submitted">
-        Ad zorunludur!
-      </div>
+<div class="container login-container ">
+  <div class="row">
+    <div class="col-md-3  ">
     </div>
-    <div>
-      <label for="password">Password</label>
-      <input type="password" name="password" [(ngModel)]="form.password" required minlength="3" #password="ngModel" />
-      <div role="alert" *ngIf="password.errors && f.submitted">
-        <div *ngIf="password.errors.required">Şifre Zorunludur</div>
-        <div *ngIf="password.errors.minlength">
-          Şifre En az 3 karakter olmalıdır
+    <div class="col-md-6 login-form-1">
+      <h3>login</h3>
+
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Your Email " name="username" [(ngModel)]="form.username"
+            #username="ngModel" />
+          <div role="alert" *ngIf="username.errors && f.submitted">
+            Ad zorunludur!
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="password" name="password" [(ngModel)]="form.password" required minlength="3" #password="ngModel"
+            class="form-control" placeholder="Password">
+          <div role="alert" *ngIf="password.errors && f.submitted">
+            <div *ngIf="password.errors.required">Şifre Zorunludur</div>
+            <div *ngIf="password.errors.minlength">
+              Şifre En az 3 karakter olmalıdır
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="btnSubmit" value="Login" />
+        </div>
+
+      </form>
+      <div class="form-group">
+        <div role="alert" *ngIf="f.submitted && isLoginFailed">
+          Hata: {{ errorMessage }}
         </div>
       </div>
-    </div>
-    <div>
-      <button>
-        Login
-      </button>
-    </div>
-    <div class="form-group">
-      <div role="alert" *ngIf="f.submitted && isLoginFailed">
-        Hata: {{ errorMessage }}
+      <div *ngIf="isLoggedIn">
+        Giriş yapıldı.
       </div>
     </div>
-  </form>
-
-  <div *ngIf="isLoggedIn">
-    Giriş yapıldı.
+    <div class="col-md-3  ">
+    </div>
   </div>
 </div>

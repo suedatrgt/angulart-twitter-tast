@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from './login.service';
 
 @Component({
@@ -14,9 +15,9 @@ export class LoginComponent {
   isLoggedIn = false;
   isLoginFailed = false;
   errorMessage = '';
-  roles: string[] = [];
+  roles: string[] = []; 
 
-  constructor(public loginService: LoginService) {
+  constructor(public loginService: LoginService,private router: Router) {
 
   }
 
@@ -24,13 +25,14 @@ export class LoginComponent {
   onSubmit(): void {
     const { username, password } = this.form;
 
-    if (username !== "ahmet" || password !== "ahmet") {
+    if (username !== "süeda" || password !== "1234") {
       this.errorMessage = "kullanıcı adı veya şifre hatalı";
       this.isLoginFailed = true;
     } else {
 
       this.isLoginFailed = false;
       this.isLoggedIn = true;
+      this.router.navigateByUrl('/layout');
     }
 
 
