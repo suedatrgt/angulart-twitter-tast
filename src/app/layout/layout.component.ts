@@ -8,11 +8,8 @@ import { LoginService } from "../login/login.service";
 })
 export class LayoutComponent {
     title = "Layout Page";
-    constructor(public loginService: LoginService) {
+    constructor( ) {
 
     }
-    logOut() { 
-        this.loginService.logOut();
-        
-    }
+    
 }

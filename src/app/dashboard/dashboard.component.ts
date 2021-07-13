@@ -16,16 +16,16 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
 
-    this.dashboardService.getUsers().subscribe(data => {
+    this.dashboardService.getTweets().subscribe(data => {
   
       data.forEach(element => {
         this.items.push(element)
       });
-      console.log(this.items);
     });
     
 
 
   }
+  
 }
 

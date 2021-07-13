@@ -26,7 +26,6 @@ export class LoginComponent {
     const { username, password } = this.form;
 
     this.loginService.login(username, password);
-    console.log(username, password)
   }
 
 }

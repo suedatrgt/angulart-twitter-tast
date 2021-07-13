@@ -10,7 +10,11 @@ export class DasthboardService{
          
     }
 
-    getUsers(): Observable<any> {
-        return this.httpService.get("https://jsonplaceholder.typicode.com/users");
+    getTweets(): Observable<any> {
+        return this.httpService.get("https://jsonplaceholder.typicode.com/comments");
+    } 
+
+    getTweetUser(id): Observable<any> {
+        return this.httpService.get("https://jsonplaceholder.typicode.com/comments/"+id);
     } 
 }

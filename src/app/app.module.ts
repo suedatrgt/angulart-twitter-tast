@@ -6,14 +6,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component'; 
-import { LayoutComponent } from './layout/layout.component';
+import { LayoutComponent } from './layout/layout.component'; 
+import { HeaderComponent } from './header/header.component';
+import { UserTweetComponent } from './user-tweet/user-tweet.component';
+import { UserPostComponent } from './user-post/user-post.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    LoginComponent
+    LoginComponent, 
+    HeaderComponent, UserTweetComponent,  UserPostComponent
   ],
   imports: [
     BrowserModule,
