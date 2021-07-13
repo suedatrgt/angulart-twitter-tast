@@ -50,3 +50,10 @@
   font-weight: 600;
   text-decoration: none;
 }
+.loginCardColor{
+  background-color: white !important;
+}
+
+.loginTextColor{
+  color:#15202B ;
+}
