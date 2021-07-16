@@ -10,6 +10,8 @@ import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './header/header.component';
 import { UserTweetComponent } from './user-tweet/user-tweet.component';
 import { UserPostComponent } from './user-post/user-post.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { RightsidebarComponent } from './rightsidebar/rightsidebar.component';
 
 
 @NgModule({
@@ -17,7 +19,7 @@ import { UserPostComponent } from './user-post/user-post.component';
     AppComponent,
     LayoutComponent,
     LoginComponent, 
-    HeaderComponent, UserTweetComponent,  UserPostComponent
+    HeaderComponent, UserTweetComponent,  UserPostComponent, SidebarComponent, RightsidebarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { DasthboardService } from '../dashboard/dashboard.service';
 
 @Component({
@@ -7,23 +8,22 @@ import { DasthboardService } from '../dashboard/dashboard.service';
   styleUrls: ['./user-tweet.component.css']
 })
 export class UserTweetComponent implements OnInit {
+ //
+  constructor(public dashboardService: DasthboardService,public route: ActivatedRoute) {
+    
+   }
 
-  constructor(public dashboardService: DasthboardService) { }
+  items: any[] = []; 
 
-  items: any[] = [];
-  
+ 
   ngOnInit(): void {
-
-    var url_string = window.location.href; //window.location.href
+  
+    var url_string = window.location.href; 
     var url = new URL(url_string);
     var id = url.searchParams.get("id");
    
-    this.dashboardService.getTweetUser(id).subscribe(data => {
-
-      this.items.push(data);
-
-
+    this.dashboardService.getTweetUser(id).subscribe(data => { 
+      this.items.push(data);  
     });
   }
-
 }

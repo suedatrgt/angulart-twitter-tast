@@ -16,31 +16,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.dashboardService.getTweets().subscribe(data => {
-
-      data.forEach(element => {
-        this.items.push(element)
-      });
-
-      this.postIds = [...new Map(this.items.map(item =>
-        [item["postId"], item])).values()];
-
-    });
-  }
-
-  getTweetByID(id) {
-    this.router.navigateByUrl(`dashboard/user?id=${id}`);
-  }
-
-
-  getTweetsByPostID(id) {
-    this.router.navigateByUrl(`dashboard/userpost?postId=${id}`);
   }
 
   goHome() {
     this.router.navigateByUrl(`dashboard`);
   }
-  logOut() {
-    this.loginService.logOut();
-  }
+
 }

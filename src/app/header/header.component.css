@@ -10,3 +10,12 @@
 .appName{
         font-size: xx-large;
 }
+
+.titleName{
+    margin-left: 19.6%;
+    color:#1DA1F2  !important;
+}
+.twitterIcon{
+    margin-left: 3% !important;
+    color:#1DA1F2 ;
+}

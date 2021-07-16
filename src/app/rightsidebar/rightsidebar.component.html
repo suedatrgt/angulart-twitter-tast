@@ -1,0 +1,39 @@
+<div class="card bg-light mt-3 sideRmenu" >
+
+  <div class="card-body">
+
+    <div class="mb-4">
+      <h5 class="card-title title " data-toggle="collapse" data-target="#postCollopse" aria-expanded="true"
+        aria-controls="postCollopse">Tweet by Email</h5>
+
+      <div class="collapse show bg-light " id="postCollopse">
+        <div class="list-group scrollbar " >
+          <a class="list-group-item list-group-item-action bg-light "  *ngFor="let item of items" (click)="getTweetByID(item.id)">{{item.email}}</a>    
+
+          
+         
+        </div>
+    
+      </div>
+    </div>
+
+    <div>
+
+      <h5 class="card-title title " data-toggle="collapse" data-target="#emailCollopse" aria-expanded="false"
+        aria-controls="emailCollopse"> Tweet by Post Number</h5>
+
+
+      <div class="collapse show " id="emailCollopse">
+        
+          <div class="list-group scrollbar " >
+          
+              <a class="list-group-item list-group-item-action bg-light"  *ngFor="let post of postIds" (click)="getTweetsByPostID(post.postId)">{{post.postId}}</a>
+             
+          </div>
+      
+      </div>
+
+    </div>
+
+  </div>
+</div>
