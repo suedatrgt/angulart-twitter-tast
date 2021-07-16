@@ -14,7 +14,7 @@ export class LoginService{
 
     login(username: string, password: string) {
         
-    if (username !== "süeda" || password !== "1234") {
+    if (username !== "admin" || password !== "admin") {
         // this.errorMessage = "kullanıcı adı veya şifre hatalı";
         this.isLoggedIn = false;
       } else {
