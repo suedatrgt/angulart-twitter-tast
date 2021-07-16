@@ -2,7 +2,12 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
 .appBackColor{
-    background-color:#15202B !important ;
-    color: white !important;
-    border-color: white !important;
+    background-color:#FFFFFF  !important ;
+    color: #536471 !important;
+    border-color: #EFF3F4 !important;
+}
+
+.title{
+    color:#0F1419 !important;
+    font-weight:  bold !important;
 }
